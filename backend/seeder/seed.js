@@ -270,6 +270,246 @@ const MOCK_COURSES = [
       },
     ],
   },
+
+  // ── 5. Mobile App Development ─────────────
+  {
+    title: "Flutter Mobile App Development: Build for Android & iOS",
+    description:
+      "Build production-ready cross-platform apps using Flutter and Dart. Learn widgets, state management, API integration, and app publishing workflows.",
+    category: "Mobile Development",
+    courseLevel: "Intermediate",
+    thumbnail:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+    studentsEnrolled: 1625,
+    rating: 4.7,
+    ratingCount: 389,
+    courseOutcomes: [
+      "Build cross-platform mobile apps with Flutter",
+      "Create reusable UI widgets and layouts",
+      "Manage app state with Provider",
+      "Consume REST APIs and parse JSON",
+      "Handle local storage and authentication",
+      "Prepare apps for Play Store and App Store",
+    ],
+    sections: [
+      {
+        sectionTitle: "Flutter Foundations",
+        lectures: [
+          { title: "Flutter Setup and Tooling", description: "Install SDK, Android Studio, and emulators.", videoUrl: v(3), duration: "520", isPreview: true },
+          { title: "Widgets, Layouts, and Navigation", description: "Build responsive screens with core widgets.", videoUrl: v(4), duration: "760", isPreview: false },
+          { title: "Forms and Input Validation", description: "Create robust forms with validation rules.", videoUrl: v(5), duration: "610", isPreview: false },
+        ],
+      },
+      {
+        sectionTitle: "State and Backend Integration",
+        lectures: [
+          { title: "State Management with Provider", description: "Structure scalable state for medium-sized apps.", videoUrl: v(6), duration: "700", isPreview: false },
+          { title: "REST APIs and Async UI", description: "Fetch data and render loading/error states.", videoUrl: v(7), duration: "650", isPreview: false },
+          { title: "Publishing and Performance Tips", description: "Optimize build size and release your app.", videoUrl: v(0), duration: "580", isPreview: false },
+        ],
+      },
+    ],
+  },
+
+  // ── 6. Cybersecurity Fundamentals ─────────
+  {
+    title: "Cybersecurity Fundamentals: Protect Systems and Networks",
+    description:
+      "Learn practical cybersecurity basics, threat modeling, network defense, and secure coding habits. Great for developers and IT beginners.",
+    category: "Cybersecurity",
+    courseLevel: "Beginner",
+    thumbnail:
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+    studentsEnrolled: 2109,
+    rating: 4.8,
+    ratingCount: 511,
+    courseOutcomes: [
+      "Identify common attack vectors",
+      "Apply core network security principles",
+      "Understand authentication and authorization",
+      "Use secure password and secret practices",
+      "Read and respond to basic security logs",
+      "Improve security posture of web applications",
+    ],
+    sections: [
+      {
+        sectionTitle: "Security Basics",
+        lectures: [
+          { title: "Threat Landscape Overview", description: "Malware, phishing, social engineering, and ransomware.", videoUrl: v(1), duration: "490", isPreview: true },
+          { title: "CIA Triad and Risk Concepts", description: "Confidentiality, integrity, availability in practice.", videoUrl: v(2), duration: "560", isPreview: false },
+          { title: "Authentication and Access Control", description: "MFA, RBAC, and least privilege.", videoUrl: v(3), duration: "630", isPreview: false },
+        ],
+      },
+      {
+        sectionTitle: "Defensive Practices",
+        lectures: [
+          { title: "Network Security Essentials", description: "Firewalls, VPNs, segmentation, and IDS basics.", videoUrl: v(4), duration: "740", isPreview: false },
+          { title: "Secure Coding for Developers", description: "OWASP Top 10 and input validation techniques.", videoUrl: v(5), duration: "810", isPreview: false },
+          { title: "Incident Response Basics", description: "How to detect, contain, and recover quickly.", videoUrl: v(6), duration: "620", isPreview: false },
+        ],
+      },
+    ],
+  },
+
+  // ── 7. Generative AI in Practice ──────────
+  {
+    title: "Generative AI for Developers: Prompting, APIs, and Workflows",
+    description:
+      "Build AI-assisted features into real applications using modern prompting, vector search concepts, and API-based integrations.",
+    category: "Artificial Intelligence",
+    courseLevel: "Intermediate",
+    thumbnail:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    studentsEnrolled: 1340,
+    rating: 4.6,
+    ratingCount: 298,
+    courseOutcomes: [
+      "Write robust prompts for consistent outputs",
+      "Use LLM APIs in frontend and backend workflows",
+      "Design retrieval-augmented generation flows",
+      "Implement guardrails and output validation",
+      "Estimate token usage and optimize cost",
+      "Ship practical AI features safely",
+    ],
+    sections: [
+      {
+        sectionTitle: "Prompting and Foundations",
+        lectures: [
+          { title: "How LLMs Work at a High Level", description: "Core model behavior and context windows.", videoUrl: v(7), duration: "540", isPreview: true },
+          { title: "Prompt Patterns and Templates", description: "Few-shot prompting and structured outputs.", videoUrl: v(0), duration: "700", isPreview: false },
+          { title: "Evaluation and Hallucination Control", description: "Testing prompts and reducing incorrect output.", videoUrl: v(1), duration: "690", isPreview: false },
+        ],
+      },
+      {
+        sectionTitle: "Building AI Features",
+        lectures: [
+          { title: "Integrating LLM APIs in Node.js", description: "Backend patterns for chat and summarization.", videoUrl: v(2), duration: "760", isPreview: false },
+          { title: "RAG Concepts with Vector Search", description: "Indexing documents and grounded answers.", videoUrl: v(3), duration: "830", isPreview: false },
+          { title: "Safety, Cost, and Production Ops", description: "Rate limits, caching, and monitoring basics.", videoUrl: v(4), duration: "610", isPreview: false },
+        ],
+      },
+    ],
+  },
+
+  // ── 8. QA Automation with Selenium ───────
+  {
+    title: "QA Automation Engineering with Selenium and Playwright",
+    description:
+      "Learn modern test automation for web applications using Selenium, Playwright, and CI pipelines. Build maintainable test suites and improve release confidence.",
+    category: "Software Testing",
+    courseLevel: "Intermediate",
+    thumbnail:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80",
+    studentsEnrolled: 980,
+    rating: 4.7,
+    ratingCount: 221,
+    courseOutcomes: [
+      "Design stable UI automation frameworks",
+      "Write end-to-end tests with Playwright",
+      "Use Selenium for cross-browser automation",
+      "Run automated tests in CI/CD pipelines",
+      "Apply test reporting and flaky test debugging",
+      "Integrate API and UI testing strategies",
+    ],
+    sections: [
+      {
+        sectionTitle: "Automation Fundamentals",
+        lectures: [
+          { title: "Manual vs Automation Testing", description: "Understand where automation delivers the most value.", videoUrl: v(5), duration: "470", isPreview: true },
+          { title: "Locator Strategies and Test Design", description: "Create robust selectors and stable test cases.", videoUrl: v(6), duration: "620", isPreview: false },
+          { title: "Selenium WebDriver Essentials", description: "Set up Selenium tests and handle waits effectively.", videoUrl: v(7), duration: "760", isPreview: false },
+        ],
+      },
+      {
+        sectionTitle: "Playwright and CI Integration",
+        lectures: [
+          { title: "Playwright Project Setup", description: "Bootstrap tests, configs, and fixtures.", videoUrl: v(0), duration: "540", isPreview: false },
+          { title: "Visual and API Assertions", description: "Combine UI and API checks for stronger coverage.", videoUrl: v(1), duration: "690", isPreview: false },
+          { title: "Parallel Runs in GitHub Actions", description: "Automate test execution on every pull request.", videoUrl: v(2), duration: "610", isPreview: false },
+        ],
+      },
+    ],
+  },
+
+  // ── 9. SQL and Data Analytics ────────────
+  {
+    title: "SQL for Data Analytics: From Basics to Advanced Queries",
+    description:
+      "Master SQL for analytics roles by learning joins, CTEs, window functions, and performance tuning. Practice with real business reporting scenarios.",
+    category: "Data Analytics",
+    courseLevel: "Beginner",
+    thumbnail:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    studentsEnrolled: 1540,
+    rating: 4.8,
+    ratingCount: 367,
+    courseOutcomes: [
+      "Write clean and efficient SQL queries",
+      "Use joins, subqueries, and CTEs confidently",
+      "Analyze trends using window functions",
+      "Build KPI dashboards from relational data",
+      "Optimize query performance with indexing",
+      "Prepare for analytics and BI interviews",
+    ],
+    sections: [
+      {
+        sectionTitle: "SQL Core Skills",
+        lectures: [
+          { title: "SELECT, WHERE, ORDER BY", description: "Retrieve and filter data with confidence.", videoUrl: v(3), duration: "500", isPreview: true },
+          { title: "GROUP BY and Aggregations", description: "Summarize data for reporting metrics.", videoUrl: v(4), duration: "630", isPreview: false },
+          { title: "JOINs and Data Modeling Basics", description: "Connect tables and understand relationships.", videoUrl: v(5), duration: "780", isPreview: false },
+        ],
+      },
+      {
+        sectionTitle: "Advanced Analytics SQL",
+        lectures: [
+          { title: "CTEs and Subqueries", description: "Structure complex logic in readable ways.", videoUrl: v(6), duration: "620", isPreview: false },
+          { title: "Window Functions in Practice", description: "Calculate running totals and rankings.", videoUrl: v(7), duration: "830", isPreview: false },
+          { title: "Performance Tuning and Indexes", description: "Speed up slow reports and heavy queries.", videoUrl: v(0), duration: "700", isPreview: false },
+        ],
+      },
+    ],
+  },
+
+  // ── 10. Product Management Essentials ────
+  {
+    title: "Product Management Essentials: Strategy, Roadmaps, and Execution",
+    description:
+      "Learn how product managers discover customer needs, prioritize features, define roadmaps, and collaborate with design and engineering teams.",
+    category: "Product Management",
+    courseLevel: "Beginner",
+    thumbnail:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    studentsEnrolled: 1120,
+    rating: 4.7,
+    ratingCount: 245,
+    courseOutcomes: [
+      "Define product goals with clear success metrics",
+      "Conduct discovery interviews and user research",
+      "Prioritize features using proven frameworks",
+      "Write effective user stories and acceptance criteria",
+      "Plan releases with realistic roadmaps",
+      "Align stakeholders across business and engineering",
+    ],
+    sections: [
+      {
+        sectionTitle: "Product Discovery and Strategy",
+        lectures: [
+          { title: "Role of a Product Manager", description: "Understand responsibilities and key PM workflows.", videoUrl: v(1), duration: "450", isPreview: true },
+          { title: "Customer Research and Insights", description: "Run interviews and synthesize findings.", videoUrl: v(2), duration: "640", isPreview: false },
+          { title: "Problem Statements and Value Propositions", description: "Define the right problem before building.", videoUrl: v(3), duration: "590", isPreview: false },
+        ],
+      },
+      {
+        sectionTitle: "Delivery and Stakeholder Management",
+        lectures: [
+          { title: "Backlog Prioritization Techniques", description: "Use RICE and MoSCoW frameworks effectively.", videoUrl: v(4), duration: "610", isPreview: false },
+          { title: "Roadmaps and Release Planning", description: "Communicate plans with clarity and flexibility.", videoUrl: v(5), duration: "670", isPreview: false },
+          { title: "Working with Engineering and Design", description: "Run healthy cross-functional collaboration loops.", videoUrl: v(6), duration: "580", isPreview: false },
+        ],
+      },
+    ],
+  },
 ];
 
 // ─────────────────────────────────────────────

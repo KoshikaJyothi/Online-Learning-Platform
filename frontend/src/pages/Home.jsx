@@ -4,11 +4,11 @@ import CourseSection from "../components/CourseSection";
 function Home() {
   return (
     <div className="bg-[#ffffff]">
-      <section className="mx-auto max-w-325 px-4 pb-20 pt-6 lg:px-8">
+      <section className="mx-auto w-full max-w-330 px-4 pb-16 pt-4 sm:pt-6 sm:pb-20 lg:px-8">
         <HeroSlider />
         <CourseSection />
 
-        <section className="mt-20 grid gap-6 rounded-3xl border border-[#e9eaf2] bg-[#f7f9fa] p-6 lg:grid-cols-3 lg:p-10">
+        <section className="mt-14 sm:mt-20 grid gap-5 rounded-3xl border border-[#e9eaf2] bg-[#f7f9fa] p-5 sm:p-6 lg:grid-cols-3 lg:p-10">
           <article>
             <h3 className="text-xl font-black text-[#1c1d1f]">Hands-on projects</h3>
             <p className="mt-2 text-[#4d5156]">

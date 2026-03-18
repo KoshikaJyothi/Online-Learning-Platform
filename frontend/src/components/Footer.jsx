@@ -2,14 +2,14 @@ function Footer() {
   return (
     <footer className="bg-[#1c1d1f] text-gray-300 mt-16">
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
 
         <h2 className="text-white text-lg mb-8">
           Explore top skills and certifications
         </h2>
 
         {/* 🔥 TOP GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
 
           {/* Column 1 */}
           <div>
@@ -62,7 +62,7 @@ function Footer() {
         </div>
 
         {/* 🔥 SECOND GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm mt-10">
 
           <div>
             <h3 className="text-white font-semibold mb-3">
@@ -112,7 +112,7 @@ function Footer() {
         </div>
 
         {/* 🔥 BOTTOM */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm mt-12 border-t border-gray-700 pt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm mt-12 border-t border-gray-700 pt-8">
 
           <div>
             <h3 className="text-white font-semibold mb-3">About</h3>
@@ -159,7 +159,7 @@ function Footer() {
         </div>
 
         {/* 🔥 COPYRIGHT */}
-        <div className="mt-8 flex justify-between items-center text-sm text-gray-400">
+        <div className="mt-8 flex flex-col sm:flex-row justify-between sm:items-center gap-2 text-sm text-gray-400">
           <h2 className="text-white font-bold text-lg">CourseHub</h2>
           <p>© 2026 CourseHub Inc.</p>
         </div>

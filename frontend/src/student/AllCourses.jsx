@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import {
   FiSearch, FiBook, FiStar, FiClock, FiPlay,
-  FiFilter, FiX, FiUsers, FiGrid, FiList
+  FiFilter, FiX, FiUsers, FiGrid, FiList, FiChevronDown
 } from "react-icons/fi";
 
 const LEVELS = ["All", "Beginner", "Intermediate", "Advanced"];
@@ -25,6 +25,7 @@ function AllCourses() {
   const [categoryFilter,setCategoryFilter]= useState("All");
   const [viewMode,      setViewMode]      = useState("grid"); // "grid" | "list"
   const [sortBy,        setSortBy]        = useState("newest");
+  const [showFilters,   setShowFilters]   = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -101,10 +102,10 @@ function AllCourses() {
     <div className="min-h-screen bg-[#f8fafc]">
 
       {/* ── HERO HEADER ── */}
-      <div className="bg-gradient-to-r from-violet-700 to-indigo-600 px-8 py-12 text-white">
+      <div className="bg-linear-to-r from-violet-700 to-indigo-600 px-4 sm:px-8 py-10 sm:py-12 text-white">
         <div className="max-w-7xl mx-auto">
           <p className="text-violet-200 text-sm font-medium mb-2">Explore</p>
-          <h1 className="text-4xl font-bold mb-2">All Courses</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-2">All Courses</h1>
           <p className="text-violet-200 mb-8">
             {allCourses.length} courses available — find your next skill
           </p>
@@ -128,11 +129,20 @@ function AllCourses() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
         <div className="flex flex-col lg:flex-row gap-8">
 
+          <button
+            type="button"
+            onClick={() => setShowFilters((prev) => !prev)}
+            className="lg:hidden inline-flex items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm"
+          >
+            <span className="inline-flex items-center gap-2"><FiFilter size={15} /> Filters</span>
+            <FiChevronDown size={16} className={`transition-transform ${showFilters ? "rotate-180" : ""}`} />
+          </button>
+
           {/* ── SIDEBAR FILTERS ── */}
-          <aside className="w-full lg:w-64 shrink-0 space-y-6">
+          <aside className={`${showFilters ? "block" : "hidden"} lg:block w-full lg:w-64 shrink-0 space-y-6`}>
 
             {/* Active filters header */}
             {hasActiveFilters && (
@@ -277,7 +287,7 @@ function CourseCard({ course, isEnrolled, onEnroll, enrollingId }) {
   return (
     <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
       {/* Thumbnail */}
-      <div className="relative h-44 overflow-hidden flex-shrink-0">
+      <div className="relative h-44 overflow-hidden shrink-0">
         {course.thumbnail ? (
           <img
             src={course.thumbnail}
@@ -285,7 +295,7 @@ function CourseCard({ course, isEnrolled, onEnroll, enrollingId }) {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-violet-600 to-indigo-500">
+          <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-violet-600 to-indigo-500">
             <FiBook size={36} className="text-white/50" />
           </div>
         )}
@@ -340,13 +350,13 @@ function CourseCard({ course, isEnrolled, onEnroll, enrollingId }) {
 /* ─── List Row ───────────────────────────────────────────── */
 function CourseListRow({ course, isEnrolled, onEnroll, enrollingId }) {
   return (
-    <div className="bg-white rounded-2xl shadow-sm hover:shadow-md border border-slate-100 transition-all overflow-hidden flex gap-0 group">
+    <div className="bg-white rounded-2xl shadow-sm hover:shadow-md border border-slate-100 transition-all overflow-hidden flex flex-col sm:flex-row gap-0 group">
       {/* Thumbnail */}
-      <div className="w-48 shrink-0 relative overflow-hidden">
+      <div className="w-full sm:w-48 h-48 sm:h-auto shrink-0 relative overflow-hidden">
         {course.thumbnail ? (
           <img src={course.thumbnail} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-violet-600 to-indigo-500 min-h-[130px]">
+          <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-violet-600 to-indigo-500 min-h-32.5">
             <FiBook size={28} className="text-white/50" />
           </div>
         )}
@@ -374,11 +384,11 @@ function CourseListRow({ course, isEnrolled, onEnroll, enrollingId }) {
           </div>
         </div>
 
-        <div className="shrink-0">
+        <div className="shrink-0 w-full sm:w-auto">
           {isEnrolled ? (
             <Link
               to={`/course/${course._id}`}
-              className="px-5 py-2.5 rounded-xl bg-violet-600 text-white text-sm font-bold flex items-center gap-2 hover:bg-violet-700 transition"
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-violet-600 text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-violet-700 transition"
             >
               <FiPlay size={13} /> Continue
             </Link>
@@ -386,7 +396,7 @@ function CourseListRow({ course, isEnrolled, onEnroll, enrollingId }) {
             <button
               onClick={() => onEnroll(course._id)}
               disabled={enrollingId === course._id}
-              className="px-5 py-2.5 rounded-xl border-2 border-violet-500 text-violet-600 text-sm font-bold hover:bg-violet-600 hover:text-white transition disabled:opacity-50"
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl border-2 border-violet-500 text-violet-600 text-sm font-bold hover:bg-violet-600 hover:text-white transition disabled:opacity-50"
             >
               {enrollingId === course._id ? "Enrolling..." : "Enroll Free"}
             </button>

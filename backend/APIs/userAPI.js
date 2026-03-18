@@ -6,12 +6,9 @@ import { CourseProgress } from "../models/CourseProgress.js";
 
 export const userRouter = express.Router();
 
-// Apply verifyToken middleware to all user routes
-userRouter.use(verifyToken);
-
 
 // Get User Profile
-userRouter.get('/profile', async (req, res) => {
+userRouter.get('/profile', verifyToken, async (req, res) => {
     try {
         const userId = req.user._id;
         const user = await User.findById(userId).select('-password');
@@ -27,7 +24,7 @@ userRouter.get('/profile', async (req, res) => {
 });
 
 // Enroll courses
-userRouter.post('/enroll-course', async (req, res) => {
+userRouter.post('/enroll-course', verifyToken, async (req, res) => {
     try {
         const userId = req.user._id;
         const courseId = req.body.courseId;
@@ -63,7 +60,7 @@ userRouter.post('/enroll-course', async (req, res) => {
 });
 
 
-userRouter.get('/my-courses', async (req, res) => {
+userRouter.get('/my-courses', verifyToken, async (req, res) => {
     try {
         const userId = req.user._id;
 
@@ -119,7 +116,7 @@ userRouter.get('/course/:id', async(req, res)=>{
 
 // Student review and rating
 
-userRouter.post('/review/:courseId', async(req, res)=>{
+userRouter.post('/review/:courseId', verifyToken, async(req, res)=>{
     try {
         const courseId = req.params.courseId;
         const userId = req.user._id;

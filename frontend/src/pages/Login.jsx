@@ -48,13 +48,13 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f8fafc] p-4 lg:p-0">
-      <div className="flex w-full max-w-[1100px] h-[700px] bg-white rounded-3xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-[#f8fafc] p-4 sm:p-6">
+      <div className="flex w-full max-w-275 bg-white rounded-3xl shadow-2xl overflow-hidden lg:min-h-175">
         
         {/* LEFT SECTION: FORM */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-16">
-          <div className="mb-10 text-center lg:text-left">
-            <h1 className="text-4xl font-bold text-violet-700 mb-3">Welcome Back</h1>
+        <div className="w-full lg:w-1/2 flex flex-col justify-center px-5 py-8 sm:px-8 lg:px-16 lg:py-12">
+          <div className="mb-8 sm:mb-10 text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl font-bold text-violet-700 mb-3">Welcome Back</h1>
             <p className="text-slate-500">Enter your credentials to access your account</p>
           </div>
 
@@ -146,8 +146,8 @@ function Login() {
         {/* RIGHT SECTION: VISUALS */}
         <div className="hidden lg:flex w-1/2 bg-[#1e293b] p-12 flex-col justify-between relative overflow-hidden">
           {/* Animated Circles for background decoration */}
-          <div className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-[#3b82f6]/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-[#3b82f6]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-[-10%] right-[-10%] w-100 h-100 bg-[#3b82f6]/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-[-10%] left-[-10%] w-75 h-75 bg-[#3b82f6]/10 rounded-full blur-3xl"></div>
 
           <div className="relative z-10">
             <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-12 shadow-xl shrink-0">

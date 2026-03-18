@@ -56,13 +56,13 @@ function Register() {
   const strengthColor = ["", "bg-red-400", "bg-yellow-400", "bg-green-500"];
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#f8fafc] p-4 lg:p-0">
-      <div className="flex h-auto w-full max-w-275 overflow-hidden rounded-3xl bg-white shadow-2xl lg:h-190">
+    <div className="flex min-h-screen items-center justify-center bg-[#f8fafc] p-4 sm:p-6">
+      <div className="flex h-auto w-full max-w-275 overflow-hidden rounded-3xl bg-white shadow-2xl lg:min-h-190">
 
         {/* ── LEFT: FORM ── */}
-        <div className="flex w-full flex-col justify-center px-8 py-10 lg:w-1/2 lg:px-16">
+        <div className="flex w-full flex-col justify-center px-5 py-8 sm:px-8 sm:py-10 lg:w-1/2 lg:px-16">
           <div className="mb-8 text-center lg:text-left">
-            <h1 className="text-4xl font-bold text-violet-600">Create account</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-violet-600">Create account</h1>
             <p className="mt-2 text-slate-500">Start learning for free today</p>
           </div>
 
@@ -87,7 +87,7 @@ function Register() {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
 
             {/* First + Last name row */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {/* First Name */}
               <div>
                 <div className="relative group">
@@ -183,7 +183,7 @@ function Register() {
             {/* Role selector */}
             <div>
               <p className="mb-2 text-sm font-semibold text-[#475569]">I want to</p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { value: "STUDENT",    label: "Learn",  sub: "Access courses" },
                   { value: "INSTRUCTOR", label: "Teach",  sub: "Create & sell courses" },
